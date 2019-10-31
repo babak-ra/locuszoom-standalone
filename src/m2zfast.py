@@ -1277,7 +1277,7 @@ def getSettings():
   parser.set_defaults(
     multi = 1,
     delim = "\t",
-    epacts_chrom_col = "#CHROM",
+    epacts_chr_col = "#CHROM",
     epacts_beg_col = "BEGIN",
     epacts_end_col = "END",
     epacts_pval_col = "PVALUE",
@@ -1931,7 +1931,7 @@ def runAll(input_file,input_type,refsnp,chr,start,end,opts,args):
   if input_type == 'metal':
     (bPocull,metal_temp,min_snp) = read_metal(input_file,opts.snpcol,opts.pvalcol,opts.no_trans,chr,start,end,opts.sqlite_db_file,delim)
   elif input_type == 'epacts':
-    (bPocull,metal_temp,min_snp) = read_epacts(input_file,chr,start,end,opts.epacts_chrom_col,opts.epacts_beg_col,opts.epacts_end_col,opts.epacts_pval_col,opts.no_trans)
+    (bPocull,metal_temp,min_snp) = read_epacts(input_file,chr,start,end,opts.epacts_chr_col,opts.epacts_beg_col,opts.epacts_end_col,opts.epacts_pval_col,opts.no_trans)
 
   ld_temp = None
   
